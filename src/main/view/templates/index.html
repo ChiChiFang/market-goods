@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="display: flex;align-items: center">
+    <div style="width: 40%">
+        <img src="/images/index/logo.png">
+    </div>
+    <div style="width: 40%">
+        <div style="width: 80%">
+            <input type="text" style="height: 30px; border: none;width: 100%">
+        </div>
+        <div style="color: white;background: red;padding: 5px 20px;width: 20%">
+            搜索
+        </div>
+    </div>
+    <div style="width: 20%;text-align: center;border: solid lightgray 1px;background: rgb(245,245,245);padding: 6px;color: red;margin-left:30px;">
+        我的购物车
+    </div>
+    <div onclick="window.location='/login'" id="loginBtn" style="width: 20%;text-align: center;border: solid lightgray 1px;background: rgb(245,245,245);padding: 6px;color: red;margin-left:30px;">
+        登录
+    </div>
+</div>
+
+<div style="display: flex">
+    <div style="width: 20%;border: solid red">
+        <div style="display: flex;align-items: center" th:each="x:${#numbers.sequence(1,6)}">
+            <div>电子产品</div>
+            <div style="display: flex;  flex-wrap: wrap">
+                <div style="margin: 5px">手机</div>
+                <div style="margin: 5px">电脑</div>
+                <div style="margin: 5px">遥控器</div>
+                <div style="margin: 5px">电子手表</div>
+            </div>
+        </div>
+    </div>
+    <div style="width: 80%;border: solid red;display:  flex;padding: 20px">
+        <div style="padding: 10px;border: solid lightgray 1px">
+            <div><img src="/images/index/logo.png" /></div>
+            <div style="color: orangered"><span style="font-size: 20px">1891</span></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
